@@ -21,7 +21,7 @@
 <Parameter>
 <Attributes name="datatype"/>
 <O>
-<![CDATA[]]></O>
+<![CDATA[分类集汇总]]></O>
 </Parameter>
 <Parameter>
 <Attributes name="s_stock"/>
@@ -122,22 +122,32 @@ ${if(datatype == '明细',"case   when wzta_checkgainprice >=0 and wzta_checkgai
 ,sum(wzta_invlossproqty) aswzta_invlossproqty
 ,sum(wzta_checkinvprice) aswzta_checkinvprice
 ,sum(wzta_checkinvamount) aswzta_checkinvamount
-,sum(((wzta_priceend*aswzta_qtycurroutput)/rou_sum)*wzta_priceend) sum_avg
+,sum(((wzta_priceend*wzta_qtycurroutput)/rou_sum)*wzta_priceend) sum_avg
 from
 (
-select  *
-,(case when wzta_qtycurroutput=0 then 1 end) aswzta_qtycurroutput
-,round(sum(wzta_priceend*(case when wzta_qtycurroutput=0 then 1 end)),2) rou_sum
+select  t1.*,t2.rou_sum
 from 
-cockpit_man_transient_library_stockdetialcheck 
+cockpit_man_transient_library_stockdetialcheck_view t1
+	LEFT JOIN (SELECT
+	wzta_org_num,
+	wzta_org_name,
+	wzta_typegrp,
+	round(SUM(wzta_priceend * wzta_qtycurroutput), 2 ) rou_sum
+FROM
+	cockpit_man_transient_library_stockdetialcheck_view
+GROUP BY
+	wzta_org_num,
+	wzta_org_name,
+	wzta_typegrp) t2
+	on t1.wzta_org_num =  t2.wzta_org_num
+	and t1.wzta_typegrp = t2.wzta_typegrp
 where 1=1
-	${if(len(invent_date_periods)=0 || invent_date_periods == '',"","and  periodname = '"+invent_date_periods+"' ")}
-	${if(len(company)=0 || company == '',"","and  wzta_org_num = '"+company+"' ")} 
-	${if(len(whsection)=0 || whsection == '',"","and  wzta_whsection = '"+whsection+"' ")} 
-	${if(len(classify)=0 || classify == '',"","and  wzta_typegrp = '"+classify+"' ")} 
-	${if(len(s_stock)=0 || s_stock == '',"","and  wzta_warehouse = '"+s_stock+"' ")
+	${if(len(invent_date_periods)=0 || invent_date_periods == '',"","and  t1.periodname = '"+invent_date_periods+"' ")}
+	${if(len(company)=0 || company == '',"","and  t1.wzta_org_num = '"+company+"' ")} 
+	${if(len(whsection)=0 || whsection == '',"","and  t1.wzta_whsection = '"+whsection+"' ")} 
+	${if(len(classify)=0 || classify == '',"","and  t1.wzta_typegrp = '"+classify+"' ")} 
+	${if(len(s_stock)=0 || s_stock == '',"","and  t1.wzta_warehouse = '"+s_stock+"' ")
 	}
-group by wzta_typegrp
 )t
 WHERE 1=1 
 	${if(len(invent_date_periods)=0 || invent_date_periods == '',"","and  periodname = '"+invent_date_periods+"' ")}

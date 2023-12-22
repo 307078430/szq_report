@@ -879,7 +879,7 @@ $('#fr-btn-CustomToolBarButton').text("当前页 " + curnum + " 条数据，共"
 <RowHeight defaultValue="723900">
 <![CDATA[1950720,1257300,1257300,1104900,1097280,723900,723900,723900,723900,723900,723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
-<![CDATA[2743200,5212080,6522720,3505200,3048000,6819900,4305300,4457700,4457700,7823200,7670800,4032000,0,0,4032000,0,0,4032000,0,0,4032000,0,0,4495800,0,0,4032000,0,4032000,4032000,0,4032000,0,0,0,0,0,0,0,2781300,2781300,2781300,2781300,2743200]]></ColumnWidth>
+<![CDATA[2743200,5212080,6522720,3505200,3733800,6819900,4305300,4457700,4457700,7823200,7670800,4032000,0,0,4032000,0,0,4032000,0,0,4032000,0,0,4495800,0,0,4032000,0,4032000,4032000,0,4032000,0,0,0,0,0,0,0,2781300,2781300,2781300,2781300,2743200]]></ColumnWidth>
 <CellElementList>
 <C c="0" r="0">
 <PrivilegeControl/>
@@ -936,10 +936,8 @@ $('#fr-btn-CustomToolBarButton').text("当前页 " + curnum + " 条数据，共"
 <Expand/>
 </C>
 <C c="0" r="1" rs="2" s="1">
-<O t="XMLable" class="com.fr.base.Formula">
-<Attributes>
-<![CDATA[=if(datatype = '汇总-分类集', "", if(datatype = '汇总-子库', "", if(datatype = '汇总-车间', "", "序号")))]]></Attributes>
-</O>
+<O>
+<![CDATA[序号]]></O>
 <PrivilegeControl/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
@@ -955,10 +953,8 @@ $('#fr-btn-CustomToolBarButton').text("当前页 " + curnum + " 条数据，共"
 <Expand/>
 </C>
 <C c="1" r="1" rs="2" s="1">
-<O t="XMLable" class="com.fr.base.Formula">
-<Attributes>
-<![CDATA[=if(datatype = '汇总-分类集', "", if(datatype = '汇总-子库', "", if(datatype = '汇总-车间', "", "物料编码")))]]></Attributes>
-</O>
+<O>
+<![CDATA[物料编码]]></O>
 <PrivilegeControl/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
@@ -974,10 +970,8 @@ $('#fr-btn-CustomToolBarButton').text("当前页 " + curnum + " 条数据，共"
 <Expand/>
 </C>
 <C c="2" r="1" rs="2" s="1">
-<O t="XMLable" class="com.fr.base.Formula">
-<Attributes>
-<![CDATA[=if(datatype = '汇总-分类集', "", if(datatype = '汇总-子库', "", if(datatype = '汇总-车间', "", "物料描述")))]]></Attributes>
-</O>
+<O>
+<![CDATA[物料描述]]></O>
 <PrivilegeControl/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
@@ -993,10 +987,8 @@ $('#fr-btn-CustomToolBarButton').text("当前页 " + curnum + " 条数据，共"
 <Expand/>
 </C>
 <C c="3" r="1" rs="2" s="1">
-<O t="XMLable" class="com.fr.base.Formula">
-<Attributes>
-<![CDATA[=if(datatype = '汇总-分类集', "", if(datatype = '汇总-子库', "", if(datatype = '汇总-车间', "", "单位")))]]></Attributes>
-</O>
+<O>
+<![CDATA[单位]]></O>
 <PrivilegeControl/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
@@ -1012,10 +1004,8 @@ $('#fr-btn-CustomToolBarButton').text("当前页 " + curnum + " 条数据，共"
 <Expand/>
 </C>
 <C c="4" r="1" rs="2" s="1">
-<O t="XMLable" class="com.fr.base.Formula">
-<Attributes>
-<![CDATA[=if(datatype = '汇总-分类集', "", if(datatype = '汇总-子库', "", if(datatype = '汇总-车间', "", "单价")))]]></Attributes>
-</O>
+<O>
+<![CDATA[单价]]></O>
 <PrivilegeControl/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
@@ -1031,10 +1021,8 @@ $('#fr-btn-CustomToolBarButton').text("当前页 " + curnum + " 条数据，共"
 <Expand/>
 </C>
 <C c="5" r="1" rs="2" s="1">
-<O t="XMLable" class="com.fr.base.Formula">
-<Attributes>
-<![CDATA[=if(datatype = '汇总-子库', "", if(datatype = '汇总-车间', "", if(datatype = '汇总-分类集', "", "分类集")))]]></Attributes>
-</O>
+<O>
+<![CDATA[分类集]]></O>
 <PrivilegeControl/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
@@ -1050,10 +1038,8 @@ $('#fr-btn-CustomToolBarButton').text("当前页 " + curnum + " 条数据，共"
 <Expand/>
 </C>
 <C c="6" r="1" rs="2" s="1">
-<O t="XMLable" class="com.fr.base.Formula">
-<Attributes>
-<![CDATA[=if(datatype = '汇总-子库', "", if(datatype = '汇总-车间', "", if(datatype = '汇总-分类集', "", "是否价值高")))]]></Attributes>
-</O>
+<O>
+<![CDATA[是否价值高]]></O>
 <PrivilegeControl/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
@@ -1069,10 +1055,8 @@ $('#fr-btn-CustomToolBarButton').text("当前页 " + curnum + " 条数据，共"
 <Expand/>
 </C>
 <C c="7" r="1" rs="2" s="1">
-<O t="XMLable" class="com.fr.base.Formula">
-<Attributes>
-<![CDATA[=if(datatype = '汇总-分类集', "", if(datatype = '汇总-子库', "", if(datatype = '汇总-车间', "", "规格型号")))]]></Attributes>
-</O>
+<O>
+<![CDATA[规格型号]]></O>
 <PrivilegeControl/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
@@ -1088,10 +1072,8 @@ $('#fr-btn-CustomToolBarButton').text("当前页 " + curnum + " 条数据，共"
 <Expand/>
 </C>
 <C c="8" r="1" rs="2" s="1">
-<O t="XMLable" class="com.fr.base.Formula">
-<Attributes>
-<![CDATA[=if(datatype = '汇总-分类集', "", if(datatype = '汇总-子库', "", if(datatype = '汇总-车间', "", "仓段")))]]></Attributes>
-</O>
+<O>
+<![CDATA[仓段]]></O>
 <PrivilegeControl/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
@@ -1107,10 +1089,8 @@ $('#fr-btn-CustomToolBarButton').text("当前页 " + curnum + " 条数据，共"
 <Expand/>
 </C>
 <C c="9" r="1" rs="2" s="1">
-<O t="XMLable" class="com.fr.base.Formula">
-<Attributes>
-<![CDATA[=if(datatype = '汇总-分类集', "", if(datatype = '汇总-子库', "", if(datatype = '汇总-车间', "", "车间")))]]></Attributes>
-</O>
+<O>
+<![CDATA[车间]]></O>
 <PrivilegeControl/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
@@ -1126,10 +1106,8 @@ $('#fr-btn-CustomToolBarButton').text("当前页 " + curnum + " 条数据，共"
 <Expand/>
 </C>
 <C c="10" r="1" rs="2" s="1">
-<O t="XMLable" class="com.fr.base.Formula">
-<Attributes>
-<![CDATA[=if(datatype = '汇总-分类集', "", if(datatype = '汇总-车间', "", if(datatype = '汇总-子库', "", "子库")))]]></Attributes>
-</O>
+<O>
+<![CDATA[子库]]></O>
 <PrivilegeControl/>
 <HighlightList>
 <Highlight class="com.fr.report.cell.cellattr.highlight.DefaultHighlight">
